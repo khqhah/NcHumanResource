@@ -1,0 +1,6 @@
+@NcHumanResource_HostAddress = http://localhost:5109
+
+GET {{NcHumanResource_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
