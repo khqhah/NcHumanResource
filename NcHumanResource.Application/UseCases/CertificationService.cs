@@ -26,7 +26,8 @@ namespace NcHumanResource.Application.UseCases
                 Name = dto.Name,
                 IssuingAuthority = dto.IssuingAuthority,
                 IssueDate = dto.IssueDate,
-                ExpiryDate = dto.ExpiryDate
+                ExpiryDate = dto.ExpiryDate,
+                isMembership = dto.isMembership
             };
             await _repo.AddCertificationAsync(employeeId, cert);
         }
@@ -42,7 +43,8 @@ namespace NcHumanResource.Application.UseCases
                 Name = dto.Name,
                 IssuingAuthority = dto.IssuingAuthority,
                 IssueDate = dto.IssueDate,
-                ExpiryDate = dto.ExpiryDate
+                ExpiryDate = dto.ExpiryDate,
+                isMembership = dto.isMembership
             };
             await _repo.UpdateCertificationAsync(employeeId, updated);
         }

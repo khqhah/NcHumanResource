@@ -40,7 +40,7 @@ namespace NcHumanResouce.Infrastructure.Repositories
         {
             var filter = Builders<Employee>.Filter.And(
                 Builders<Employee>.Filter.Eq(e => e.NcEmployeeID, employeeId),
-                Builders<Employee>.Filter.ElemMatch(e => e.BankDetails, b => b.BankId == updatedBank.BankId)
+                Builders<Employee>.Filter.ElemMatch(e => e.BankDetails, b => b.Id == updatedBank.Id)
             );
 
             var update = Builders<Employee>.Update.Set("BankDetails.$", updatedBank);
@@ -51,7 +51,7 @@ namespace NcHumanResouce.Infrastructure.Repositories
         {
             var filter = Builders<Employee>.Filter.Eq(e => e.NcEmployeeID, employeeId);
             var update = Builders<Employee>.Update.PullFilter(e => e.BankDetails,
-                Builders<Bank>.Filter.Eq(b => b.BankId, bankId));
+                Builders<Bank>.Filter.Eq(b => b.Id, bankId));
             await _collection.UpdateOneAsync(filter, update);
         }
     }

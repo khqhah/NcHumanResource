@@ -28,6 +28,8 @@ builder.Services.AddScoped<ITodoListRepository, TodoListRepository>();
 builder.Services.AddScoped<IVacationRepository, VacationRepository>();
 builder.Services.AddScoped<IExpenseRequestRepository, ExpenseRequestRepository>();
 builder.Services.AddScoped<ITravelRequestRepository, TravelRequestRepository>();
+builder.Services.AddScoped<IEmployeePreferenceRepository, EmployeePreferenceRepository>();
+builder.Services.AddScoped<IAnnualReviewRepository, AnnualReviewRepository>();
 
 
 builder.Services.AddScoped<DepartmentService>();
@@ -43,6 +45,8 @@ builder.Services.AddScoped<TodoListService>();
 builder.Services.AddScoped<VacationService>();
 builder.Services.AddScoped<ExpenseRequestService>();
 builder.Services.AddScoped<TravelRequestService>();
+builder.Services.AddScoped<EmployeePreferenceService>();
+builder.Services.AddScoped<AnnualReviewService>();
 
 
 

@@ -27,6 +27,11 @@ namespace NcHumanResource.Application.UseCases
                 MiddleInitials = dto.MiddleInitials,
                 LastName = dto.LastName,
                 Addresses = dto.Addresses,
+                EmergencyContacts = dto.EmergencyContacts,//new
+                BankDetails = dto.BankDetails,//new
+                Documents= dto.Documents,//new
+                Certifications=dto.Certifications,//new
+                Talents = dto.Talents,//new
                 Department = dto.Department,
                 DateOfBirth = dto.DateOfBirth,
                 SalaryAmount = dto.SalaryAmount,
@@ -54,7 +59,19 @@ namespace NcHumanResource.Application.UseCases
                 AccessCard = dto.AccessCard,
                 Licenses = dto.Licenses,
                 IsContractSigned = dto.IsContractSigned,
-                ContractSignatureDate = dto.ContractSignatureDate
+                ContractSignatureDate = dto.ContractSignatureDate,
+                //new
+                Tasks = dto.Tasks,
+                Benefits = dto.Benefits,
+                TodoList = dto.TodoList,
+                Status = dto.Status,
+                VacationRequests = dto.VacationRequests,
+                VacationAccrued = dto.VacationAccrued,
+                VacationUsed = dto.VacationUsed,
+                ExpenseRequests = dto.ExpenseRequests, 
+                TravelRequests = dto.TravelRequests,
+                Preferences = dto.Preferences,
+                AnnualReviews = dto.AnnualReviews
             };
 
             await _repo.AddAsync(employee);
@@ -84,11 +101,49 @@ namespace NcHumanResource.Application.UseCases
         {
             var updated = new Employee
             {
+                //NcEmployeeID = dto.NcEmployeeID,
+                //FirstName = dto.FirstName,
+                //MiddleInitials = dto.MiddleInitials,
+                //LastName = dto.LastName,
+                //Addresses = dto.Addresses,
+                //Department = dto.Department,
+                //DateOfBirth = dto.DateOfBirth,
+                //SalaryAmount = dto.SalaryAmount,
+                //SalaryType = dto.SalaryType,
+                //PaymentFrequency = dto.PaymentFrequency,
+                //EmploymentHistory = dto.EmploymentHistory,
+                //AnnualSalary = dto.AnnualSalary,
+                //Designation = dto.Designation,
+                //EmployeeType = dto.EmployeeType,
+                //IsArchived = dto.IsArchived,
+                //IsOncall = dto.IsOncall,
+                //IsRemote = dto.IsRemote,
+                //FirstDay = dto.FirstDay,
+                //LastDay = dto.LastDay,
+                //TerminationDate = dto.TerminationDate,
+                //RehireDate = dto.RehireDate,
+                //WorkEmail = dto.WorkEmail,
+                //PersonalEmail = dto.PersonalEmail,
+                //CellNumber = dto.CellNumber,
+                //WorkNumber = dto.WorkNumber,
+                //IsCellNumberOnBusinessCard = dto.IsCellNumberOnBusinessCard,
+                //RequiresBusinessCard = dto.RequiresBusinessCard,
+                //PrimaryNCOffice = dto.PrimaryNCOffice,
+                //VacationRate = dto.VacationRate,
+                //AccessCard = dto.AccessCard,
+                //Licenses = dto.Licenses,
+                //IsContractSigned = dto.IsContractSigned,
+                //ContractSignatureDate = dto.ContractSignatureDate
                 NcEmployeeID = dto.NcEmployeeID,
                 FirstName = dto.FirstName,
                 MiddleInitials = dto.MiddleInitials,
                 LastName = dto.LastName,
                 Addresses = dto.Addresses,
+                EmergencyContacts = dto.EmergencyContacts,//new
+                BankDetails = dto.BankDetails,//new
+                Documents = dto.Documents,//new
+                Certifications = dto.Certifications,//new
+                Talents = dto.Talents,//new
                 Department = dto.Department,
                 DateOfBirth = dto.DateOfBirth,
                 SalaryAmount = dto.SalaryAmount,
@@ -116,7 +171,19 @@ namespace NcHumanResource.Application.UseCases
                 AccessCard = dto.AccessCard,
                 Licenses = dto.Licenses,
                 IsContractSigned = dto.IsContractSigned,
-                ContractSignatureDate = dto.ContractSignatureDate
+                ContractSignatureDate = dto.ContractSignatureDate,
+                //new
+                Tasks = dto.Tasks,
+                Benefits = dto.Benefits,
+                TodoList = dto.TodoList,
+                Status = dto.Status,
+                VacationRequests = dto.VacationRequests,
+                VacationAccrued = dto.VacationAccrued,
+                VacationUsed = dto.VacationUsed,
+                ExpenseRequests = dto.ExpenseRequests,
+                TravelRequests = dto.TravelRequests,
+                Preferences = dto.Preferences,
+                AnnualReviews = dto.AnnualReviews
             };
 
             await _repo.UpdateAsync(ncEmployeeId, updated);

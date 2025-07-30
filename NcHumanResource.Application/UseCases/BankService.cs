@@ -22,14 +22,12 @@ namespace NcHumanResource.Application.UseCases
         {
             var bank = new Bank
             {
-                BankId = dto.BankId,
-                BankName = dto.BankName,
-                AccountTitle = dto.AccountTitle,
-                AccountNumber = dto.AccountNumber,
-                IBAN = dto.IBAN,
-                BranchCode = dto.BranchCode,
-                BranchAddress = dto.BranchAddress,
-                SwiftCode = dto.SwiftCode
+               Id = dto.Id,
+               PreferredPaymentMethod = dto.PreferredPaymentMethod,
+               WireTransfer = dto.WireTransfer,
+               Cheque = dto.Cheque,
+               DirectDeposit = dto.DirectDeposit,
+               ETransfer = dto.ETransfer
             };
             await _repo.AddBankAsync(employeeId, bank);
         }
@@ -41,14 +39,12 @@ namespace NcHumanResource.Application.UseCases
         {
             var updated = new Bank
             {
-                BankId = dto.BankId,
-                BankName = dto.BankName,
-                AccountTitle = dto.AccountTitle,
-                AccountNumber = dto.AccountNumber,
-                IBAN = dto.IBAN,
-                BranchCode = dto.BranchCode,
-                BranchAddress = dto.BranchAddress,
-                SwiftCode = dto.SwiftCode
+                Id = dto.Id,
+                PreferredPaymentMethod = dto.PreferredPaymentMethod,
+                WireTransfer = dto.WireTransfer,
+                Cheque = dto.Cheque,
+                DirectDeposit = dto.DirectDeposit,
+                ETransfer = dto.ETransfer
             };
             await _repo.UpdateBankAsync(employeeId, updated);
         }

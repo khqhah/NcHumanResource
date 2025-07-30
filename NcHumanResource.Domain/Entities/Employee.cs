@@ -66,6 +66,8 @@ namespace NcHumanResource.Domain.Entities
         public double VacationUsed { get; set; } = 0;
         public ICollection<ExpenseRequest> ExpenseRequests { get; set; } = new List<ExpenseRequest>();
         public ICollection<TravelRequest> TravelRequests { get; set; } = new List<TravelRequest>();
+        public List<EmployeePreference> Preferences { get; set; } = new();
+        public List<AnnualReview> AnnualReviews { get; set; } = new();
 
     }
 }

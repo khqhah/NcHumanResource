@@ -15,6 +15,7 @@ namespace NcHumanResource.Domain.Entities
         public string IssuingAuthority { get; set; }
         public DateOnly IssueDate { get; set; }
         public DateOnly ExpiryDate { get; set; }
+        public Boolean isMembership { get; set; }
     }
 
 }
